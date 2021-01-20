@@ -27,7 +27,7 @@
 	3. Ejecute y revise la salida por pantalla. 
 	4. Cambie el incio con 'start()' por 'run()'. Cómo cambia la salida?, por qué?.
 	![Parte 1 punto 2 run](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/p1-2-run.jfif)
-	
+	La salida cambia ya que utilizando el metodo start() se inician los hilos simultaneamente y genera salida de numeros intercalados entre los intervalos, mientras que con el metodo run() se inicia uno por uno los hilos generando los invervalos uno tras otro.
 
 **Parte II - Ejercicio Black List Search**
 
