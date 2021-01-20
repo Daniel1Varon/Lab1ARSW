@@ -1,4 +1,7 @@
 
+# BURGOS DELGADO BRAYAN STEVEN
+# VARON ROJAS DANIEL ALEJANDRO
+
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 ## Ejercicio Introducción al paralelismo - Hilos - Caso BlackListSearch
