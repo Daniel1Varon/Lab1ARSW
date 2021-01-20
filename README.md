@@ -19,12 +19,15 @@
 **Parte I - Introducción a Hilos en Java**
 
 1. De acuerdo con lo revisado en las lecturas, complete las clases CountThread, para que las mismas definan el ciclo de vida de un hilo que imprima por pantalla los números entre A y B.
-![Parte 1 punto 1](https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png)
+![Parte 1 punto 1](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/p1-1.jfif)
 2. Complete el método __main__ de la clase CountMainThreads para que:
 	1. Cree 3 hilos de tipo CountThread, asignándole al primero el intervalo [0..99], al segundo [99..199], y al tercero [200..299].
 	2. Inicie los tres hilos con 'start()'.
+	![Parte 1 punto 2 start](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/p1-2-start.jfif)
 	3. Ejecute y revise la salida por pantalla. 
 	4. Cambie el incio con 'start()' por 'run()'. Cómo cambia la salida?, por qué?.
+	![Parte 1 punto 2 run](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/p1-2-run.jfif)
+	
 
 **Parte II - Ejercicio Black List Search**
 
