@@ -9,29 +9,24 @@ public class HostBlackListThread extends Thread{
     private LinkedList<Integer> blackListOcurrences = new LinkedList<>();
     HostBlacklistsDataSourceFacade skds;
     private int ocurrencesCount=0;
+    private int checkedListsCount=0;
     public HostBlackListThread (int firstServer,int lastServer,String ipAddress,HostBlacklistsDataSourceFacade skds){
         this.firstServer=firstServer;
         this.lastServer=lastServer;
         this.ipAddress=ipAddress;
         this.skds=skds;
-        this.ocurrencesCount=ocurrencesCount;
     }
     public void run(){
-        for(int i = firstServer; i<lastServer; i++){
-            
+        for(int i = firstServer; i<=lastServer; i++){
+        	checkedListsCount++;
             if (skds.isInBlackListServer(i,this.ipAddress)){
                 blackListOcurrences.add(i);
                 ocurrencesCount++;
             }
         }
-        
-        
-        
-        
-        
-        
-        System.out.println("ip"+ipAddress);
-        System.out.println(ocurrencesCount);
-        System.out.println(blackListOcurrences);
     }
+    
+    public int getOcurrencesCount() {return ocurrencesCount;}
+    public int getCheckedListsCount() {return checkedListsCount;}
+    public LinkedList<Integer> getBlackListOcurrences() {return blackListOcurrences;}
 }
