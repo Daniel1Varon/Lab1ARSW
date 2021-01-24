@@ -6,6 +6,8 @@
 package edu.eci.arsw.blacklistvalidator;
 
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
+import edu.eci.arsw.threads.HostBlackListThread;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
@@ -38,6 +40,11 @@ public class HostBlackListsValidator {
         HostBlacklistsDataSourceFacade skds=HostBlacklistsDataSourceFacade.getInstance();
         
         int checkedListsCount=0;
+        
+        HostBlackListThread hilo1=new HostBlackListThread(0,skds.getRegisteredServersCount()/2,ipaddress,skds);
+        HostBlackListThread hilo2=new HostBlackListThread(skds.getRegisteredServersCount()/2,skds.getRegisteredServersCount(),ipaddress,skds);
+        hilo1.run();
+        hilo2.run();
         
         for (int i=0;i<skds.getRegisteredServersCount() && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
             checkedListsCount++;
