@@ -73,7 +73,7 @@ Para 'refactorizar' este código, y hacer que explote la capacidad multi-núcleo
 
 La estrategia de paralelismo antes implementada es ineficiente en ciertos casos, pues la búsqueda se sigue realizando aún cuando los N hilos (en su conjunto) ya hayan encontrado el número mínimo de ocurrencias requeridas para reportar al servidor como malicioso. Cómo se podría modificar la implementación para minimizar el número de consultas en estos casos?, qué elemento nuevo traería esto al problema?
 
-	**R/.** Se podria modificar poniendo una variable compartida entre los hilos la cual una vez se encuentren 5 ocurrencias ya detenga todos los hilos y genere los resultados.
+**R/.** Se podria modificar poniendo una variable compartida entre los hilos la cual una vez se encuentren 5 ocurrencias ya detenga todos los hilos y genere los resultados.
 
 **Parte III - Evaluación de Desempeño**
 
