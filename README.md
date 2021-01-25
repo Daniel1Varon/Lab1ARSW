@@ -95,9 +95,13 @@ Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tie
 
 	![](img/ahmdahls.png), donde _S(n)_ es el mejoramiento teórico del desempeño, _P_ la fracción paralelizable del algoritmo, y _n_ el número de hilos, a mayor _n_, mayor debería ser dicha mejora. Por qué el mejor desempeño no se logra con los 500 hilos?, cómo se compara este desempeño cuando se usan 200?. 
 
+RTA: Como se observa en el grafico, la función cuando cuando el tiempo tiende a infinito, se vuelve tangencial y se convierte casi que en una linea recta en horizontal, por tanto, llega un punto donde sin importar que se añadan mas hilos, no se mejorará el rendimiento del programa. 
+
 2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
 
-3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
+En este caso, no  se nota tremendamente la mejora, ya que el tiempo no cambia tanto como en el intervalo anterior. Siendo concretos con 4 hilos se tardó 45 segundos, mientras que con 8 hilos, se tardó 35 segundos, por tanto ya comienza a verse reflejada esa región critica donde la curva empienza a comportarse como una linea horizontal.
 
+3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta:
 
+En este caso estamos hablando de paralelismo, debido a que varios cpus estan trabajando al mismo tiempo. Teniendo claro este concepto, la teoria de mejora no es del todo cierta, ya que debemos agrupar los resultados de todos los hilos para obtener la salida esperada. Por tanto, el rendimiento de nuestro programa consume mucho recursos fisicos, por lo que al igual que con el numero de hilos, el numero de procesadores tambien deberia ser medido y buscando un punto de equilibrio.
 
