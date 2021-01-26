@@ -82,8 +82,11 @@ A partir de lo anterior, implemente la siguiente secuencia de experimentos para 
 1. Un solo hilo.
 ![Prueba 1 hilo](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/1hilo.jfif "Prueba 1 hilo")
 2. Tantos hilos como núcleos de procesamiento (haga que el programa determine esto haciendo uso del [API Runtime](https://docs.oracle.com/javase/7/docs/api/java/lang/Runtime.html)).
+
 ![Procesadores](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/procesadores.jfif "Numero de nucleos de procesamiento")
+
 Se puede ver que se tienen 4 nucleos de procesamiento.
+
 ![Prueba 4 hilos](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/4hilos.jfif "Prueba 4 hilos")
 3. Tantos hilos como el doble de núcleos de procesamiento.
 ![Prueba 8 hilos](https://github.com/Daniel1Varon/Lab1ARSW/blob/master/imagenes/8hilos.jfif "Prueba 8 hilos")
